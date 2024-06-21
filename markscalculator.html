@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Inscriptional+Pahlavi&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/Clean-Button-Scale-Hover-Effect.css">
+    <link rel="stylesheet" href="assets/css/dmp_Inputs_Generic_Text_Required.css">
+    <link rel="stylesheet" href="assets/css/Footer-Dark-icons.css">
+    <link rel="stylesheet" href="assets/css/Multiple-Input-Select-Pills.css">
+    <link rel="stylesheet" href="assets/css/untitled.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+</head>
+
+<body style="background: rgb(2,0,36);font-family: 'Titillium Web', sans-serif;background: rgb(34,193,195);background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(30,70,187,1) 100%)">
+    <nav class="navbar navbar-expand-lg fixed-top bg-secondary text-uppercase" id="mainNav" style="background: rgb(150,159,169);background-color: #092635!important;">
+        <div class="container">
+            <picture><img src="assets/img/braces.svg" width="54" height="32"></picture><a class="navbar-brand" href="./index.html">taciturn2021</a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler text-white bg-primary text-uppercase rounded" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="./index.html">Portfolio</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="./index.html">About</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="./index.html" style="margin-bottom: 0px;padding-bottom: 16px;padding-left: 16px;">Contact</a></li>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#" style="margin-top: 0px;margin-bottom: 0px;padding-top: 16px;padding-bottom: 16px;padding-left: 16px;padding-right: 16px;">Tools</a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="#">Marks Calculator</a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h1 data-bss-hover-animate="pulse" style="display: flex;text-shadow: 0px 0px;justify-content: center;font-weight: 900;font-family: 'Titillium Web', sans-serif;color: #eeeeee;padding-bottom: 1px;padding-top: 117px;">COMSATS Course <br>Marks Calculator</h1>
+    <div class="d-flex flex-column justify-content-start align-items-center" style="height: 100vh;"><div style="padding-top:15px;text-align:center;"><label class="form-label" style="padding-right:20px;font-weight: 700;font-family: 'Titillium Web', sans-serif;color: #eeeeee;">Subject Type:</label>
+    <div class="selectgroup selectgroup-pills"><label class="selectgroup-item" style><input type="radio" name="subjType" id="theory" value="theory" class="selectgroup-input" checked /><span class="selectgroup-button">Theory</span></label><label class="selectgroup-item"><input type="radio" name="subjType" value="lab" id="lab" class="selectgroup-input" /><span class="selectgroup-button">Lab</span></label></div>
+</div><div style="padding-top:15px;text-align:center;"><label class="form-label" style="padding-right:20px;font-weight: 700;font-family: 'Titillium Web', sans-serif;color: #eeeeee;">Credit Hours:</label>
+    <div class="selectgroup selectgroup-pills"><label class="selectgroup-item" style><input type="radio" name="creditHrs" id="1" value="1" class="selectgroup-input" checked /><span class="selectgroup-button">2 , 3</span></label><label class="selectgroup-item"><input type="radio" name="creditHrs" id="2" value="2" class="selectgroup-input" /><span class="selectgroup-button">3(2+1)</span></label><label class="selectgroup-item" style><input type="radio" name="creditHrs" id="3" value="3" class="selectgroup-input"/><span class="selectgroup-button">4(3+1)</span></label></div>
+</div>
+        <div class="d-flex marks-input" style="width: 313px;height: 68px;padding-top: 26px;"><strong style="margin-left: 118px;">Obtained Marks:</strong><strong style="margin-left: 27px;">Total Marks:</strong></div>
+        <div class="d-flex marks-input" style="width: 313px;height: 68px;padding-top: 26px;"><strong>Assignment:</strong><input class="d-inline spinput" type="text" style="margin-bottom: 10px;font-weight: bold;width: 63px;margin-left: 31px;padding-left: 0px;padding-right: 0px;" minlength="0" maxlength="75" id="assignObtd" required="true"><input class="d-inline-block spinput" type="text" style="margin: 0px;margin-bottom: 10px;font-weight: bold;width: 56px;margin-left: 61px;" minlength="0" maxlength="75" id="assignTotal" required="true"></div>
+        <div class="d-flex marks-input" style="width: 313px;height: 68px;padding-top: 26px;"><strong>Quiz:</strong><input class="d-inline spinput" type="text" style="margin-bottom: 11px;font-weight: bold;width: 63px;margin-left: 86px;padding-left: 0px;padding-right: 0px;" minlength="0" maxlength="75" id="quizObtd" required="true"><input class="d-inline-block spinput" type="text" style="margin: 0px;margin-bottom: 10px;font-weight: bold;width: 56px;margin-left: 61px;" minlength="0" maxlength="75" id="quizTotal" required="true"></div>
+        <div class="d-flex marks-input" style="width: 313px;height: 68px;padding-top: 26px;"><strong>Mid-Term:</strong><input class="d-inline spinput" type="text" style="margin-bottom: 10px;font-weight: bold;width: 63px;margin-left: 46px;padding-left: 0px;padding-right: 0px;" minlength="0" maxlength="75" id="midObtd" required="true"><input class="d-inline-block spinput" type="text" style="margin: 0px;margin-bottom: 10px;font-weight: bold;width: 56px;margin-left: 61px;" minlength="0" maxlength="75" id="midTotal" required="true"></div>
+        <div class="d-flex marks-input" style="width: 313px;height: 68px;padding-top: 26px;"><strong>Final:</strong><input class="d-inline spinput" type="text" style="margin-bottom: 10px;font-weight: bold;width: 63px;margin-left: 83px;padding-left: 0px;padding-right: 0px;" minlength="0" maxlength="75" id="finalObtd" required="true"><input class="d-inline-block spinput" type="text" style="margin: 0px;margin-bottom: 10px;font-weight: bold;width: 56px;margin-left: 61px;" minlength="0" maxlength="75" id="finalTotal" required="true"></div>
+        <div class="d-flex marks-input" style="width: 313px;height: 68px;padding-top: 26px;"><strong>Lab Assignment:</strong><input disabled class="d-inline spinput" type="text" style="margin-bottom: 10px;font-weight: bold;width: 63px;margin-left: 5px;padding-left: 0px;padding-right: 0px;" minlength="0" maxlength="75" id="labAssignObtd" required="true"><input class="d-inline-block spinput" type="text" style="margin: 0px;margin-bottom: 10px;font-weight: bold;width: 56px;margin-left: 61px;" minlength="0" maxlength="75" id="labAssignTotal" disabled required="true"></div>
+        <div class="d-flex marks-input" style="width: 313px;height: 68px;padding-top: 26px;"><strong>Lab Mid-Term:</strong><input disabled class="d-inline spinput" type="text" style="margin-bottom: 10px;font-weight: bold;width: 63px;margin-left: 20px;padding-left: 0px;padding-right: 0px;" minlength="0" maxlength="75" id="labMidObtd" required="true"><input class="d-inline-block spinput" type="text" style="margin: 0px;margin-bottom: 10px;font-weight: bold;width: 56px;margin-left: 61px;" minlength="0" maxlength="75" id="labMidTotal" disabled required="true"></div>
+        <div class="d-flex marks-input" style="width: 313px;height: 68px;padding-top: 26px;"><button class="btn btn-primary" id="calculate" type="button" style="border-radius: 48px;font-size: 14px;background: #393e46;font-family: 'Noto Sans Inscriptional Pahlavi', sans-serif;font-weight: bold;width: 103.75px;border-width: 0px;height: 30px;margin-left: 17px;">Calculate</button><strong style="margin-left: 56px;margin-top: 4px;">Marks Lost:&nbsp;</strong><p style="margin-left: 24px;margin-top: 4px;font-weight:900;" id="result">0</p></div>
+        <div class="d-flex marks-input" style="width: 313px;height: 68px;padding-top: 26px;"><button class="btn btn-primary" id="clear" type="button" style="border-radius: 48px;font-size: 14px;background: #393e46;font-family: 'Noto Sans Inscriptional Pahlavi', sans-serif;font-weight: bold;width: 103.75px;border-width: 0px;height: 30px;margin-left: 17px;margin-top: -23px;">Clear Fields</button></div>
+    </div>
+    <footer class="text-center footer" style="background: #092635;height: 158.234px;padding: 14px 0px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase">Links</h4><div class="col-12">
+<div class="linkedin" style="margin-bottom:15px;">
+<a href="https://www.linkedin.com/in/muhammad-abdullah-17810a288/"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+</svg></a>
+    </div>
+<div class="GitHub"><a href="https://github.com/taciturn2020"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+</svg></a></div>
+</div>
+                </div>
+            </div>
+        </div>
+        <footer class="text-center bg-dark"></footer>
+    </footer>
+    <div class="text-center text-white copyright py-4">
+        <div class="container"><small>Copyright ©&nbsp;taciturn2021 2024</small></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/freelancer.js"></script>
+    <script src = "assets/js/calc.js"></script>
+</body>
+
+</html>

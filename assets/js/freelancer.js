@@ -30,9 +30,10 @@
       });
       
       var navbarItems = navbarCollapse.querySelectorAll('a');
-      
+     console.log(navbarItems); 
       // Closes responsive menu when a scroll trigger link is clicked
       for (var item of navbarItems) {
+          if (item === navbarItems[3]) continue;
         item.addEventListener('click', function (event) {
           collapse.hide();
         });
