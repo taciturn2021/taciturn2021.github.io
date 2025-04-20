@@ -60,8 +60,21 @@
 
 <section id="portfolio" class="portfolio">
     <div class="container">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="portfolio-grid">
+        <h2 class="section-title">Featured Projects</h2>        <div class="portfolio-grid">
+            <!-- Food Delivery Management Application -->
+            <div class="portfolio-item featured-project" data-bs-toggle="modal" data-bs-target="#portfolio-modal-2">
+                <div class="featured-badge">Featured</div>
+                <img src="assets/img/fooddelivery.png" alt="Food Delivery">
+                <div class="portfolio-overlay">
+                    <h3>Food Delivery Management Application</h3>
+                    <p>Multi-tier restaurant management system with real-time order tracking.</p>
+                </div>
+                <div class="portfolio-content">
+                    <h3>Food Delivery Management Application</h3>
+                    <p>Web application for managing food delivery services with multiple branches.</p>
+                </div>
+            </div>
+            
             <!-- MP3 Player -->
             <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#portfolio-modal-1">
                 <img src="assets/img/MP3PHOTO.png" alt="MP3 Player">
@@ -72,19 +85,6 @@
                 <div class="portfolio-content">
                     <h3>MP3 Player</h3>
                     <p>Java application for playing and managing music files.</p>
-                </div>
-            </div>
-
-            <!-- Marks Calculator -->
-            <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#portfolio-modal-2">
-                <img src="assets/img/335844008-e21f2ba0-dc52-4a05-91df-a28b231a80ff.png" alt="Marks Calculator">
-                <div class="portfolio-overlay">
-                    <h3>Marks Calculator</h3>
-                    <p>Java application for calculating university grades and GPA.</p>
-                </div>
-                <div class="portfolio-content">
-                    <h3>Marks Calculator</h3>
-                    <p>Academic grading system for COMSATS University students.</p>
                 </div>
             </div>
 
@@ -164,7 +164,7 @@
                 <div class="tech-list">
                     <h4>Technical Stack</h4>
                     <ul>
-                        <li>Node.js/Express/MongoDB</li>
+                        <li>Node.js/Express/MongoDB/PostgreSQL</li>
                         <li>React & Modern JavaScript</li>
                         <li>Java Development (Minecraft Development in Spigot/Bukkit)</li>
                         <li>Python Data Science Stack</li>
@@ -215,21 +215,23 @@
     </div>
 </div>
 
-<!-- Marks Calculator Modal -->
+<!-- Food Delivery Modal -->
 <div class="modal fade" id="portfolio-modal-2" tabindex="-1" aria-labelledby="marksModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title">Marks Calculator</h2>
+                <h2 class="modal-title">Food Delivery Management Application</h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <img src="assets/img/335844008-e21f2ba0-dc52-4a05-91df-a28b231a80ff.png" class="img-fluid mb-4" alt="Marks Calculator">
                 <p class="lead">
-                    A course marks calculator for students of COMSATS University in Java.
-                    <a href="https://github.com/taciturn2020/COMSATS-Marks-Calculator" target="_blank">Marks Calculator</a>
+                    A comprehensive multi-tier restaurant management and food delivery system that supports multiple branches, administrative controls, and real-time order tracking.
+                    <a href="https://github.com/taciturn2021/food-delivery-webapp" target="_blank">GitHub Repository</a>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=Ieu_6uhlZhc" target="_blank">Youtube Showcase</a>
                     <br><br>
-                    (Also available on the website: <a href="markscalculator.html">Marks Calculator</a>)
+                    
                 </p>
             </div>
             <div class="modal-footer">

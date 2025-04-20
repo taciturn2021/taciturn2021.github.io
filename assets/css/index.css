@@ -81,6 +81,29 @@ body {
   background: linear-gradient(45deg, var(--dark), var(--primary));
 }
 
+/* Featured project styling */
+.featured-project {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(158, 200, 185, 0.3);
+  border: 2px solid var(--accent);
+  position: relative;
+  z-index: 1;
+}
+
+.featured-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--accent);
+  color: var(--dark);
+  font-weight: bold;
+  padding: 5px 12px;
+  border-radius: 20px;
+  z-index: 10;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  transform: rotate(5deg);
+}
+
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
