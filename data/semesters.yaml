@@ -63,20 +63,38 @@ semester4:
   courses:
     - code: CSC275
       title: Computer Networks
+      file: 1vNcm4EnYc-eoI-LSGw538urBl6LvzziI
     - code: CSC312
       title: Theory of Automata
+      file: 1KDZkT25u97oOjYeTUGo3sYCg7EWAGVUP
     - code: CSC316
       title: Advance Database Systems
+      file: 15lxDZ0liFdYblnvYgpLMLrQaBJeiGGAi
     - code: HUM122
       title: Fundamentals of Psychology
+      file: 1Ac_LZYV90QeqBFS9Dr1glNXFnwB3WqIU
     - code: MTH231
       title: Linear Algebra
+      file: 1BYKaGw-6AGAGXEyUEsog8-a1FwlUewGl
     - code: MTH262
       title: Statistics and Probability Theory
+      file: 1wiC9mx2rbT--dq48uoX8-WM-g5QGSiS4
 semester5:
   title: Fall 2025
   current: true
-  courses: []
+  courses:
+    - code: AIC354
+      title: Machine Learning Fundamentals
+    - code: CSC232
+      title: Information Security
+    - code: CSC262
+      title: Artificial Intelligence
+    - code: CSC301
+      title: Design and Analysis of Algorithms
+    - code: CSC323
+      title: Operating Systems
+    - code: CSC336
+      title: Web Technologies
 semester6:
   title: Spring 2026
   courses: []
