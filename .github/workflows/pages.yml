@@ -21,14 +21,26 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Go (for Hugo Modules)
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.22.x'
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: '0.149.0'
           extended: true
 
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
       - name: Build
-        run: hugo --minify
+        env:
+          HUGO_ENV: production
+        run: |
+          hugo --gc --minify -b "${{ steps.pages.outputs.base_url }}/"
 
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3
