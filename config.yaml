@@ -78,7 +78,7 @@ menu:
       weight: 20
     - identifier: calculator
       name: Marks Calculator
-      url: "/markscalculator.html"
+      url: "/marks-calculator/"
       weight: 30
 
 # GA4 injected via layouts/partials/extend_head.html

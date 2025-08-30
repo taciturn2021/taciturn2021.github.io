@@ -4,11 +4,19 @@
 {{ $data := site.Data.semesters }}
 {{ $keys := slice "semester1" "semester2" "semester3" "semester4" "semester5" "semester6" "semester7" "semester8" }}
 
+{{/* Find the index of the current semester, default to 0 */}}
+{{ $.Scratch.Set "activeIndex" 0 }}
+{{ range $i, $k := $keys }}
+  {{ $sem := index $data $k }}
+  {{ if and $sem $sem.current }}{{ $.Scratch.Set "activeIndex" $i }}{{ end }}
+{{ end }}
+{{ $active := $.Scratch.Get "activeIndex" }}
+
 <div class="tabs">
   <div class="tab-buttons">
     {{ range $i, $k := $keys }}
       {{ $sem := index $data $k }}
-      <button class="tab-btn{{ if eq $i 0 }} active{{ end }}" data-tab="s{{ add $i 1 }}">
+      <button class="tab-btn{{ if eq $i $active }} active{{ end }}" data-tab="s{{ add $i 1 }}">
         {{ with $sem.title }}{{ . }}{{ else }}Semester {{ add $i 1 }}{{ end }}
         {{ if $sem.current }}<span class="badge" style="margin-left:.5rem">Current</span>{{ end }}
       </button>
@@ -19,7 +27,7 @@
     {{ range $i, $k := $keys }}
       {{ $sem := index $data $k }}
       {{ $id := printf "s%d" (add $i 1) }}
-      <div class="tab-panel{{ if eq $i 0 }} active{{ end }}" id="{{ $id }}">
+      <div class="tab-panel{{ if eq $i $active }} active{{ end }}" id="{{ $id }}">
         {{ if and $sem (gt (len $sem.courses) 0) }}
           <div class="courses">
             {{ range $sem.courses }}

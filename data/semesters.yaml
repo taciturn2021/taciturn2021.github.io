@@ -60,7 +60,6 @@ semester3:
       file: 1VoYvVCtc2C96jr6KzqicYG3lw87TP3QA
 semester4:
   title: Spring 2025
-  current: true
   courses:
     - code: CSC275
       title: Computer Networks
@@ -76,6 +75,7 @@ semester4:
       title: Statistics and Probability Theory
 semester5:
   title: Fall 2025
+  current: true
   courses: []
 semester6:
   title: Spring 2026

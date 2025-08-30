@@ -1,0 +1,96 @@
+{{ define "main" }}
+<section class="calculator">
+  <header class="calculator-header">
+    <div class="heading">
+      <h1 class="post-title">{{ .Title }}</h1>
+      {{ with .Params.description }}<p class="post-description">{{ . }}</p>{{ end }}
+    </div>
+  </header>
+
+  <div class="calculator-card">
+    <div class="toggle-group">
+      <div class="toggle-label">Subject Type</div>
+      <div class="toggle-row" role="tablist" aria-label="Subject Type">
+        <button type="button" class="toggle-btn active" data-type="theory" aria-pressed="true">Theory</button>
+        <button type="button" class="toggle-btn" data-type="lab" aria-pressed="false">Lab</button>
+      </div>
+    </div>
+
+    <div class="toggle-group">
+      <div class="toggle-label">Credit Hours</div>
+      <div class="toggle-row" role="tablist" aria-label="Credit Hours">
+        <button type="button" class="toggle-btn active" data-credit="1" aria-pressed="true">2/3</button>
+        <button type="button" class="toggle-btn" data-credit="2" aria-pressed="false">3(2+1)</button>
+        <button type="button" class="toggle-btn" data-credit="3" aria-pressed="false">4(3+1)</button>
+      </div>
+    </div>
+
+    <div class="grid two">
+      <div>
+        <label class="form-label" for="assignObtd">Assignment Obtained</label>
+        <input type="number" class="form-control" id="assignObtd" placeholder="0" inputmode="decimal" />
+      </div>
+      <div>
+        <label class="form-label" for="assignTotal">Assignment Total</label>
+        <input type="number" class="form-control" id="assignTotal" placeholder="100" inputmode="decimal" />
+      </div>
+
+      <div>
+        <label class="form-label" for="quizObtd">Quiz Obtained</label>
+        <input type="number" class="form-control" id="quizObtd" placeholder="0" inputmode="decimal" />
+      </div>
+      <div>
+        <label class="form-label" for="quizTotal">Quiz Total</label>
+        <input type="number" class="form-control" id="quizTotal" placeholder="100" inputmode="decimal" />
+      </div>
+
+      <div>
+        <label class="form-label" for="midObtd">Mid-Term Obtained</label>
+        <input type="number" class="form-control" id="midObtd" placeholder="0" inputmode="decimal" />
+      </div>
+      <div>
+        <label class="form-label" for="midTotal">Mid-Term Total</label>
+        <input type="number" class="form-control" id="midTotal" placeholder="100" inputmode="decimal" />
+      </div>
+
+      <div>
+        <label class="form-label" for="finalObtd">Final Obtained</label>
+        <input type="number" class="form-control" id="finalObtd" placeholder="0" inputmode="decimal" />
+      </div>
+      <div>
+        <label class="form-label" for="finalTotal">Final Total</label>
+        <input type="number" class="form-control" id="finalTotal" placeholder="100" inputmode="decimal" />
+      </div>
+
+      <div class="lab" >
+        <label class="form-label" for="labAssignObtd">Lab Assignment Obtained</label>
+        <input type="number" class="form-control" id="labAssignObtd" placeholder="0" inputmode="decimal" disabled />
+      </div>
+      <div class="lab" >
+        <label class="form-label" for="labAssignTotal">Lab Assignment Total</label>
+        <input type="number" class="form-control" id="labAssignTotal" placeholder="100" inputmode="decimal" disabled />
+      </div>
+
+      <div class="lab" >
+        <label class="form-label" for="labMidObtd">Lab Mid-Term Obtained</label>
+        <input type="number" class="form-control" id="labMidObtd" placeholder="0" inputmode="decimal" disabled />
+      </div>
+      <div class="lab" >
+        <label class="form-label" for="labMidTotal">Lab Mid-Term Total</label>
+        <input type="number" class="form-control" id="labMidTotal" placeholder="100" inputmode="decimal" disabled />
+      </div>
+    </div>
+
+    <div class="result">
+      Marks Lost: <span id="result">0</span>
+    </div>
+
+    <div class="actions">
+      <button class="btn" id="calculate" type="button">Calculate</button>
+      <button class="btn secondary" id="clear" type="button">Clear</button>
+    </div>
+  </div>
+</section>
+
+<script src="/assets/js/calc.js"></script>
+{{ end }}
