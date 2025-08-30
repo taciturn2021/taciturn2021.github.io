@@ -1,0 +1,85 @@
+baseURL: "https://taciturn2021.github.io/"
+languageCode: en-us
+title: Muhammad Abdullah
+# Use PaperMod theme via Hugo Modules
+theme: ["github.com/adityatelange/hugo-PaperMod"]
+pagination:
+  pagerSize: 10
+
+# Hugo Modules: import PaperMod only (no external mounts)
+module:
+  imports:
+    - path: github.com/adityatelange/hugo-PaperMod
+
+outputs:
+  home: [HTML, RSS, JSON]
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true  # allow raw HTML in Markdown content
+
+params:
+  env: production
+  title: "Muhammad Abdullah"
+  description: "Full Stack Developer — Java | JavaScript | Go | Web"
+  keywords: [Portfolio, Software Engineer, Full Stack, Go, Java, JavaScript]
+  author: "Muhammad Abdullah"
+  defaultTheme: dark
+  disableThemeToggle: false
+  ShowShareButtons: false
+  ShowReadingTime: false
+  ShowCodeCopyButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowRssButtonInSectionTermList: false
+  TocOpen: false
+  hideFooter: false
+
+  profileMode:
+    enabled: true
+    title: "Muhammad Abdullah"
+    subtitle: "Full Stack Developer"
+    imageUrl: "/assets/img/profile.png"
+    imageTitle: "Profile"
+    buttons:
+      - name: About Me
+        url: "/#about"
+      - name: Portfolio
+        url: "/#portfolio"
+      - name: Academic Work
+        url: "/academic/"
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/taciturn2021"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/muhammad-abdullah-17810a288/"
+
+  assets:
+    favicon: "/favicon.ico"
+
+  search:
+    enabled: true
+
+menu:
+  main:
+    - identifier: about
+      name: About Me
+      url: "/#about"
+      weight: 5
+    - identifier: portfolio
+      name: Portfolio
+      url: "/#portfolio"
+      weight: 10
+    - identifier: academic
+      name: Academic Work
+      url: "/academic/"
+      weight: 20
+    - identifier: calculator
+      name: Marks Calculator
+      url: "/markscalculator.html"
+      weight: 30
+
+# GA4 injected via layouts/partials/extend_head.html
+# googleAnalytics: "G-4DVQ3444E7"

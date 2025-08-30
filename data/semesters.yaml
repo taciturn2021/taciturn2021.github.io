@@ -1,0 +1,88 @@
+semester1:
+  title: Fall 2023
+  courses:
+    - code: CSC101
+      title: Applications of ICT
+      file: 1VhWpYjbqLGDUX-S7igRzuxDbaucJKRrO
+    - code: CSC102
+      title: Discrete Structures
+      file: 1Vd9bDMRDnG8rqm8esoOpDTr-yE6DIt_S
+    - code: HUM104
+      title: Functional English
+      file: 1VhCF3BPhtt4mqpwcGTIxulsY9pv23PEE
+    - code: HUM112
+      title: Islamic Studies
+      file: 1Vho7NRKBkFumghGqNCxvH7oDmUqFMMGp
+    - code: PHY124
+      title: Applied Physics
+      file: 1VcvrtHVnQPWqblQr8d0n6EueZ6Ic72uv
+semester2:
+  title: Spring 2024
+  courses:
+    - code: CSC103
+      title: Programming Fundamentals
+      file: 1VoSW3LO4RoOP21xJl2MEGpbeJok9JIii
+    - code: CSC210
+      title: Professional Practices
+      file: 1VoM2yEHRvLpFtD4eWGDPuXHcwoF4aWYu
+    - code: CSC417
+      title: E-Commerce and Digital Marketing
+      file: 1Vmwkv-fuYV2kJOi8CkrVakJj8BYgSmBS
+    - code: EEE240
+      title: Fundamentals of Digital Logic Design
+      file: 1VkOWDEcNRxYCEsrCDjkxZC_Nwk596bcM
+    - code: HUM120
+      title: Expository Writing
+      file: 1VnTfyGZQpUP8EUF4Xn7edNtG1JgUUHsc
+    - code: HUM208
+      title: Civics and Community Engagement
+      file: 1VjT7QOmOg4x4gNsj6IHbxZXrjJLsMbuB
+semester3:
+  title: Fall 2024
+  courses:
+    - code: CSC211
+      title: Data Structures
+      file: 1Vp9qKkuxow0bVKUPhARFof5CvjnYBTD4
+    - code: CSC241
+      title: Object Oriented Programming
+      file: 1VrkujDXyuhjrdkzIvL8Yfvxc7RzLLWWm
+    - code: CSC270
+      title: Database Systems
+      file: 1Vq1ui6IU7DlHq_OQUFeWIT3AniY6BcVG
+    - code: HUM113
+      title: Ideology and Constitution of Pakistan
+      file: 1VrSJq407vHtV8iJ-ON8-MB__1ZZmkgzn
+    - code: MGT250
+      title: Introduction to Entrepreneurship
+      file: 1VrG2Lpk3vwMvolEs4PIs7LrL8wiC1vUj
+    - code: MTH104
+      title: Calculus and Analytic Geometry
+      file: 1VoYvVCtc2C96jr6KzqicYG3lw87TP3QA
+semester4:
+  title: Spring 2025
+  current: true
+  courses:
+    - code: CSC275
+      title: Computer Networks
+    - code: CSC312
+      title: Theory of Automata
+    - code: CSC316
+      title: Advance Database Systems
+    - code: HUM122
+      title: Fundamentals of Psychology
+    - code: MTH231
+      title: Linear Algebra
+    - code: MTH262
+      title: Statistics and Probability Theory
+semester5:
+  title: Fall 2025
+  courses: []
+semester6:
+  title: Spring 2026
+  courses: []
+semester7:
+  title: Fall 2026
+  courses: []
+semester8:
+  title: Spring 2027
+  courses: []

@@ -1,0 +1,52 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+
+{{ $data := site.Data.semesters }}
+{{ $keys := slice "semester1" "semester2" "semester3" "semester4" "semester5" "semester6" "semester7" "semester8" }}
+
+<div class="tabs">
+  <div class="tab-buttons">
+    {{ range $i, $k := $keys }}
+      {{ $sem := index $data $k }}
+      <button class="tab-btn{{ if eq $i 0 }} active{{ end }}" data-tab="s{{ add $i 1 }}">
+        {{ with $sem.title }}{{ . }}{{ else }}Semester {{ add $i 1 }}{{ end }}
+        {{ if $sem.current }}<span class="badge" style="margin-left:.5rem">Current</span>{{ end }}
+      </button>
+    {{ end }}
+  </div>
+
+  <div class="tab-panels">
+    {{ range $i, $k := $keys }}
+      {{ $sem := index $data $k }}
+      {{ $id := printf "s%d" (add $i 1) }}
+      <div class="tab-panel{{ if eq $i 0 }} active{{ end }}" id="{{ $id }}">
+        {{ if and $sem (gt (len $sem.courses) 0) }}
+          <div class="courses">
+            {{ range $sem.courses }}
+              {{ $has := (isset . "file") }}
+              <a class="course{{ if not $has }} muted{{ end }}" {{ if $has }}href="https://drive.google.com/uc?export=download&id={{ .file }}"{{ else }}href="#" aria-disabled="true"{{ end }}>
+                <span class="title">{{ .title }} <small class="muted">{{ .code }}</small></span>
+                <span class="download"{{ if $has }} aria-label="Download" title="Download"{{ end }}>
+                  {{ if $has }}
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                      <path fill="currentColor" d="M5 20h14v-2H5v2z"/>
+                      <path fill="currentColor" d="M11 3h2v10.586l3.293-3.293 1.414 1.414L12 17.414l-5.707-5.707 1.414-1.414L11 13.586V3z"/>
+                    </svg>
+                  {{ else }}
+                    Unavailable
+                  {{ end }}
+                </span>
+              </a>
+            {{ end }}
+          </div>
+        {{ else }}
+          <p class="muted">This semester is not available yet.</p>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+</div>
+
+{{ $js := resources.Get "js/academic.js" | minify | fingerprint }}
+<script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+{{ end }}

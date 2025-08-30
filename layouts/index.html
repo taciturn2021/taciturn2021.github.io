@@ -1,0 +1,33 @@
+{{ define "main" }}
+  {{/* Render About Me above portfolio by extracting the #about section from home content */}}
+  {{ $home := site.GetPage "/_index.md" }}
+  {{ with $home }}
+    {{ $about := findRE `(?s)<section[^>]*id="about"[^>]*>.*?</section>` .Content }}
+    {{ if gt (len $about) 0 }}
+      {{ index $about 0 | safeHTML }}
+    {{ end }}
+  {{ end }}
+
+  <section id="portfolio">
+    <h2>Featured Projects</h2>
+    {{ $projects := site.GetPage "section" "projects" }}
+    {{ if $projects }}
+      <div class="portfolio-grid">
+        {{ range $projects.Pages.ByWeight }}
+          <article class="portfolio-item">
+            <a href="{{ .RelPermalink }}" class="card">
+              {{ if .Params.featured }}<span class="featured">Featured</span>{{ end }}
+              {{ with .Params.cover }}
+                <img src="{{ .image }}" alt="{{ .alt }}" loading="lazy" />
+              {{ end }}
+              <div class="content">
+                <h3>{{ .Title }}</h3>
+                {{ with .Params.description }}<p>{{ . }}</p>{{ end }}
+              </div>
+            </a>
+          </article>
+        {{ end }}
+      </div>
+    {{ end }}
+  </section>
+{{ end }}

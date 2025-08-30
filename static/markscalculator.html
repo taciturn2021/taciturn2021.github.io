@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4DVQ3444E7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-4DVQ3444E7');
+  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marks Calculator - taciturn2021</title>
+  <link rel="icon" href="/favicon.ico" />
+  <!-- Minimal, theme-aligned styles -->
+  <link rel="stylesheet" href="assets/css/calc.css" />
+  <style>
+    :root {
+      --page-bg: #0f172a; /* slate-900 */
+      --text-color: #e5e7eb; /* gray-200 */
+      --heading-color: #fff;
+      --muted-text: #9aa0a6;
+      --outline: rgba(255,255,255,0.08);
+      --outline-strong: rgba(255,255,255,0.18);
+      --btn-bg: rgba(255,255,255,0.04);
+      --btn-bg-hover: rgba(255,255,255,0.08);
+      --accent: #2563eb; /* blue-600 */
+      --destructive: #dc2626; /* red-600 */
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --page-bg: #f6f7f9;
+        --text-color: #1f2937; /* gray-800 */
+        --heading-color: #111827;
+        --muted-text: #6b7280;
+        --outline: rgba(0,0,0,0.08);
+        --outline-strong: rgba(0,0,0,0.16);
+        --btn-bg: rgba(0,0,0,0.03);
+        --btn-bg-hover: rgba(0,0,0,0.06);
+      }
+    }
+    html { color-scheme: dark light; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--page-bg);
+      color: var(--text-color);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .page-wrap { width: 100%; max-width: 960px; margin: 0 auto; padding: 72px 16px 24px; }
+    .calc-header {
+      position: sticky; top: 0; z-index: 10;
+      background: color-mix(in srgb, var(--page-bg) 85%, transparent);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--outline);
+    }
+    .calc-header-inner { max-width: 960px; margin: 0 auto; padding: 10px 16px; display: flex; align-items: center; gap: 12px; }
+    .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--muted-text); text-decoration: none; font-weight: 600; }
+    .back-link:hover { color: var(--text-color); }
+    .back-link svg { width: 18px; height: 18px; }
+    .page-title { margin: 0 0 16px; font-size: 28px; line-height: 1.2; font-weight: 800; color: var(--heading-color); text-align: center; }
+    /* Harmonize buttons with site */
+    .btn { border: 1px solid var(--outline-strong); background: var(--btn-bg); color: var(--text-color); border-radius: 10px; padding: 0.85rem 1rem; font-weight: 700; cursor: pointer; }
+    .btn:hover { background: var(--btn-bg-hover); }
+    .btn-calculate { background: var(--accent); border-color: transparent; color: #fff; }
+    .btn-calculate:hover { filter: brightness(1.05); }
+    .btn-clear { background: var(--destructive); border-color: transparent; color: #fff; }
+
+    /* Card width alignment */
+    .calculator-card { max-width: 760px; }
+  </style>
+</head>
+<body>
+  <header class="calc-header">
+    <div class="calc-header-inner">
+      <a class="back-link" href="/#portfolio" aria-label="Back to portfolio">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        Back to Portfolio
+      </a>
+    </div>
+  </header>
+
+  <div class="page-wrap">
+    <main class="calculator-card">
+      <h1 class="page-title">COMSATS Course Marks Calculator</h1>
+
+      <div class="toggle-group" role="tablist" aria-label="Subject Type">
+        <button type="button" class="toggle-btn active" data-type="theory" aria-pressed="true">Theory</button>
+        <button type="button" class="toggle-btn" data-type="lab" aria-pressed="false">Lab</button>
+      </div>
+
+      <div class="toggle-group" role="tablist" aria-label="Credit Hours">
+        <button type="button" class="toggle-btn active" data-credit="1" aria-pressed="true">2/3</button>
+        <button type="button" class="toggle-btn" data-credit="2" aria-pressed="false">3(2+1)</button>
+        <button type="button" class="toggle-btn" data-credit="3" aria-pressed="false">4(3+1)</button>
+      </div>
+
+      <div class="marks-inputs">
+        <div class="input-group-mark">
+          <div>
+            <label class="form-label" for="assignObtd">Assignment Obtained</label>
+            <input type="number" class="form-control" id="assignObtd" placeholder="0" inputmode="decimal" />
+          </div>
+          <div>
+            <label class="form-label" for="assignTotal">Assignment Total</label>
+            <input type="number" class="form-control" id="assignTotal" placeholder="100" inputmode="decimal" />
+          </div>
+        </div>
+
+        <div class="input-group-mark">
+          <div>
+            <label class="form-label" for="quizObtd">Quiz Obtained</label>
+            <input type="number" class="form-control" id="quizObtd" placeholder="0" inputmode="decimal" />
+          </div>
+          <div>
+            <label class="form-label" for="quizTotal">Quiz Total</label>
+            <input type="number" class="form-control" id="quizTotal" placeholder="100" inputmode="decimal" />
+          </div>
+        </div>
+
+        <div class="input-group-mark">
+          <div>
+            <label class="form-label" for="midObtd">Mid-Term Obtained</label>
+            <input type="number" class="form-control" id="midObtd" placeholder="0" inputmode="decimal" />
+          </div>
+          <div>
+            <label class="form-label" for="midTotal">Mid-Term Total</label>
+            <input type="number" class="form-control" id="midTotal" placeholder="100" inputmode="decimal" />
+          </div>
+        </div>
+
+        <div class="input-group-mark">
+          <div>
+            <label class="form-label" for="finalObtd">Final Obtained</label>
+            <input type="number" class="form-control" id="finalObtd" placeholder="0" inputmode="decimal" />
+          </div>
+          <div>
+            <label class="form-label" for="finalTotal">Final Total</label>
+            <input type="number" class="form-control" id="finalTotal" placeholder="100" inputmode="decimal" />
+          </div>
+        </div>
+
+        <div class="input-group-mark lab-inputs">
+          <div>
+            <label class="form-label" for="labAssignObtd">Lab Assignment Obtained</label>
+            <input type="number" class="form-control" id="labAssignObtd" placeholder="0" inputmode="decimal" disabled />
+          </div>
+          <div>
+            <label class="form-label" for="labAssignTotal">Lab Assignment Total</label>
+            <input type="number" class="form-control" id="labAssignTotal" placeholder="100" inputmode="decimal" disabled />
+          </div>
+        </div>
+
+        <div class="input-group-mark lab-inputs">
+          <div>
+            <label class="form-label" for="labMidObtd">Lab Mid-Term Obtained</label>
+            <input type="number" class="form-control" id="labMidObtd" placeholder="0" inputmode="decimal" disabled />
+          </div>
+          <div>
+            <label class="form-label" for="labMidTotal">Lab Mid-Term Total</label>
+            <input type="number" class="form-control" id="labMidTotal" placeholder="100" inputmode="decimal" disabled />
+          </div>
+        </div>
+      </div>
+
+      <div class="result-display" aria-live="polite">
+        Marks Lost: <span id="result">0</span>
+      </div>
+
+      <div class="action-buttons">
+        <button class="btn btn-calculate" id="calculate" type="button">Calculate</button>
+        <button class="btn btn-clear" id="clear" type="button">Clear</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/calc.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.25rem}.portfolio-item{border-radius:12px;overflow:hidden;background:var(--theme);border:1px solid var(--entry);transition:transform .2s ease,box-shadow .2s ease}.portfolio-item:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.25)}.portfolio-item img{width:100%;height:180px;object-fit:cover;display:block}.portfolio-item .content{padding:1rem}.portfolio-item h3{margin:0 0 .25rem;font-size:1.05rem}.portfolio-item p{margin:0;color:var(--secondary)}
+
+/* Simple section spacing */
+section#portfolio{margin-top:2rem}
+
+/* Space between portfolio heading and cards */
+section#portfolio > h2{margin-bottom:1rem}
+
+/* Academic tabs */
+.tabs{margin-top:1rem}
+.tab-buttons{display:flex;gap:.5rem;overflow:auto;padding-bottom:.5rem;border-bottom:1px solid var(--entry);overflow-x:auto;overflow-y:hidden;flex-wrap:nowrap;-webkit-overflow-scrolling:touch}
+.tab-btn{background:var(--theme);border:1px solid var(--entry);padding:.4rem .75rem;border-radius:8px;cursor:pointer;color:inherit;white-space:nowrap;flex:0 0 auto}
+.tab-btn.active{background:var(--primary);border-color:var(--primary);color:#fff}
+.tab-panels{margin-top:1rem}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+.courses{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.75rem}
+.course{display:flex;justify-content:space-between;align-items:center;padding:.75rem 1rem;border:1px solid var(--entry);border-radius:10px;background:var(--theme);text-decoration:none;color:inherit}
+.course:hover{box-shadow:0 8px 24px rgba(0,0,0,.2);transform:translateY(-2px)}
+.course .title{font-weight:600}
+.course .download{color:var(--primary)}
+.muted{opacity:.6}
+
+/* Icon size for course download buttons */
+.course .download .icon{width:30px;height:30px}
+
+/* Featured badge */
+.portfolio-item .featured{position:absolute;top:8px;left:8px;background:var(--primary);color:#fff;padding:.2rem .5rem;border-radius:6px;font-size:.75rem;font-weight:700}
+.portfolio-item{position:relative}
+
+/* Post action buttons layout */
+.post-actions{margin-top:1rem;display:flex;gap:.5rem;flex-wrap:wrap}
+
+/* Outline button styling for project links */
+.btn{display:inline-flex;align-items:center;gap:.45rem;border:1px solid var(--primary);color:var(--primary);padding:.45rem .75rem;border-radius:8px;text-decoration:none;transition:background .2s,color .2s,border-color .2s}
+.btn:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
+.btn:focus{outline:2px solid var(--primary);outline-offset:2px}
+
+/* Icon sizing and spacing inside buttons */
+.icon{width:1rem;height:1rem;display:inline-block}
+
+/* About Me card styling */
+#about{max-width:900px;margin:1.25rem auto 2rem;padding:1.25rem 1.5rem;border:1px solid var(--entry);border-radius:12px;background:var(--theme);box-shadow:0 6px 20px rgba(0,0,0,.15)}
+#about h2{margin-top:0;margin-bottom:.5rem}
+#about h4{margin:.9rem 0 .4rem;font-size:1rem;font-weight:700;padding-bottom:.2rem;border-bottom:1px solid var(--entry)}
+#about p{margin:.5rem 0 1rem}
+#about ul{padding-left:1.2rem;margin:.25rem 0}
+#about li{margin:.2rem 0}
+
+/* Minimal social icons inside About */
+#about .social-icons{display:flex;gap:.5rem;margin-top:.75rem}
+#about .social-icons a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid var(--entry);border-radius:8px;color:var(--primary);transition:background .2s,color .2s,border-color .2s}
+#about .social-icons a:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
+#about .social-icons .icon{width:20px;height:20px}
+
+/* Stronger outline in light mode */
+html[data-theme='light'] #about .social-icons a,
+html:not([data-theme='dark']) #about .social-icons a{border-color:rgba(0,0,0,.25);box-shadow:0 0 0 1px rgba(0,0,0,.04) inset}
+
+/* Marks Calculator theme tokens */
+:root {
+  --page-bg: var(--theme);
+  --text-color: rgb(228, 228, 228);
+  --heading-color: #fff;
+  --muted-text: #9aa0a6;
+  --outline: rgba(255,255,255,0.08);
+  --outline-strong: rgba(255,255,255,0.18);
+  --btn-bg: rgba(255,255,255,0.04);
+  --btn-bg-hover: rgba(255,255,255,0.08);
+  --accent: #2563eb; /* blue-600 */
+  --destructive: #dc2626; /* red-600 */
+}
+.light :root, :root.light, [data-scheme="light"] :root {
+  --page-bg: #f6f7f9;
+  --text-color: #1f2937;
+  --heading-color: #111827;
+  --muted-text: #6b7280;
+  --outline: rgba(0,0,0,0.08);
+  --outline-strong: rgba(0,0,0,0.16);
+  --btn-bg: rgba(0,0,0,0.03);
+  --btn-bg-hover: rgba(0,0,0,0.06);
+}
+
+/* Slight card alignment improvements on small screens */
+@media (max-width: 420px) {
+  .calculator-card { border-radius: 16px; }
+}
+
+@media (max-width: 520px){
+  .tab-btn{font-size:.95rem;padding:.45rem .6rem}
+  .tab-buttons{gap:.4rem}
+}

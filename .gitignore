@@ -1,0 +1,21 @@
+# Hugo build output
+/public/
+/resources/
+/server/
+.hugo_build.lock
+
+# Dependency caches
+**/.hugo_cache/
+
+# Node & package managers (if ever used)
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
