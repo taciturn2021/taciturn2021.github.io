@@ -10,7 +10,7 @@ title: "Home"
   <div>
     <h4>Current Focus</h4>
     <ul>
-      <li>Advanced Backend Development in GO</li>
+      <li>Advanced Backend Development in TypeScript</li>
       <li>Microservices Architecture</li>
       <li>Distributed Computing</li>
     </ul>
@@ -18,8 +18,8 @@ title: "Home"
   <div>
     <h4>Technical Stack</h4>
     <ul>
-      <li>Node.js/Express/MongoDB/PostgreSQL</li>
-      <li>React & Modern JavaScript</li>
+      <li>Node.js/Express/Bun/MongoDB/PostgreSQL</li>
+      <li>React & Modern TypeScript/JavaScript</li>
       <li>Java Development (Minecraft Development in Spigot/Bukkit)</li>
       <li>Python Data Science Stack</li>
     </ul>
